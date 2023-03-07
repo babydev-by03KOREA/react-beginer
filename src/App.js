@@ -6,6 +6,9 @@ import React from "react";
 import Test from './test';
 /* CSS 불러오기 */
 import './App.css';
+import Wrapper from "./wrapper";
+import Counter from "./Counter";
+import InputSample from "./InputSample";
 
 function App() {
     const name = 'react.js';
@@ -19,15 +22,23 @@ function App() {
         padding: '1rem',
     };
     return (
-        <>
-            /* 주석은 중괄호로 감싸주세요! 화면에 보여유! */
+        /*<Wrapper>
+            <div style={style}>{name}</div>
+            {/!* class가 아닌 className *!/}
             <Test
                 // 열리는 태그 내부에서는 이렇게 작성도 가능해유!
+                name="properties"
+                color="tomato"
+                // isSpecial={true} > True 작성하지 않고 isSpecial 만 작성하면 자동으로 true
+                isSpecial
             />
-            <div style={style}>{name}</div>
-            {/* class가 아닌 className */}
+            <Test
+                color="pink"
+                isSpecial={false}
+            />
             <div className="gray-box"></div>
-        </>
+        </Wrapper>*/
+        <InputSample/>
     );
 }
 
